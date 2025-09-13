@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reco AI Agent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="cpu" class="h-8 w-8 text-indigo-600"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Reco AI</span>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-8">
+                    <a href="#" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium">Home</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Products</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Vendors</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Recommendations</a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition-all">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    AI-Powered Product Recommendations
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-xl">
+                    Discover the perfect electronics with our intelligent recommendation system powered by advanced AI algorithms.
+                </p>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <a href="#" class="bg-white text-indigo-600 px-8 py-3 rounded-md text-base font-medium hover:bg-gray-100 transition-all">Explore Products</a>
+                    <a href="#" class="bg-indigo-500 bg-opacity-20 text-white px-8 py-3 rounded-md text-base font-medium hover:bg-opacity-30 transition-all">How It Works</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase" data-aos="fade-up">Features</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" data-aos="fade-up">
+                    A better way to discover products
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm card-hover transition-all" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <i data-feather="search"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900">Smart Search</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Find exactly what you're looking for with our AI-powered search that understands your needs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm card-hover transition-all" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <i data-feather="thumbs-up"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900">Personalized Recommendations</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Get tailored suggestions based on your preferences and browsing history.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm card-hover transition-all" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900">Trusted Vendors</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                We partner with verified vendors to ensure you get quality products every time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Showcase -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase" data-aos="fade-up">Products</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" data-aos="fade-up">
+                    Featured Electronics
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Product 1 -->
+                <div class="bg-white overflow-hidden shadow rounded-lg card-hover transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="h-12 w-12 rounded-md bg-indigo-100 text-indigo-600 flex items-center justify-center">
+                                    <i data-feather="smartphone"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Premium Smartphone</h3>
+                                <p class="mt-1 text-sm text-gray-500">Latest model with advanced features</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-600">
+                                High-performance smartphone with 128GB storage, 8GB RAM, and 48MP camera.
+                            </p>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">$899.99</span>
+                            <button class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white overflow-hidden shadow rounded-lg card-hover transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="h-12 w-12 rounded-md bg-indigo-100 text-indigo-600 flex items-center justify-center">
+                                    <i data-feather="monitor"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">4K Monitor</h3>
+                                <p class="mt-1 text-sm text-gray-500">Ultra HD display</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-600">
+                                32-inch 4K UHD monitor with HDR support and 144Hz refresh rate for smooth visuals.
+                            </p>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">$499.99</span>
+                            <button class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white overflow-hidden shadow rounded-lg card-hover transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="h-12 w-12 rounded-md bg-indigo-100 text-indigo-600 flex items-center justify-center">
+                                    <i data-feather="headphones"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Wireless Headphones</h3>
+                                <p class="mt-1 text-sm text-gray-500">Noise cancelling</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-600">
+                                Premium wireless headphones with active noise cancellation and 30-hour battery life.
+                            </p>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">$249.99</span>
+                            <button class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button class="bg-indigo-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-indigo-700 transition-all">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-indigo-700">
+        <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl" data-aos="fade-up">
+                <span class="block">Ready to discover your perfect product?</span>
+            </h2>
+            <p class="mt-4 text-lg leading-6 text-indigo-200" data-aos="fade-up" data-aos-delay="100">
+                Our AI recommendation engine will help you find exactly what you need.
+            </p>
+            <a href="#" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto transition-all" data-aos="fade-up" data-aos-delay="200">
+                Try It Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">About</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Products</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Vendors</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Privacy</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Terms</a>
+                </div>
+            </nav>
+            <div class="mt-8 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i data-feather="facebook"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i data-feather="instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i data-feather="linkedin"></i>
+                </a>
+            </div>
+            <p class="mt-8 text-center text-base text-gray-400">
+                &copy; 2023 Reco AI Agent. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>
